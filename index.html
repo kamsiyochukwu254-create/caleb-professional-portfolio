@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b09">
+<meta name="description" content="Igwe Kamsiyochukwu Caleb — AI Evaluation, Digital Data Rating and Content Quality Specialist.">
+<title>Caleb Igwe | Professional Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#080b09;
+  --panel:#101611;
+  --panel2:#151d17;
+  --green:#55e6a5;
+  --white:#f3f7f3;
+  --muted:#9ba89e;
+  --line:rgba(255,255,255,.09);
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.7;min-height:100vh}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:4px}
+img{display:block;max-width:100%}
+.container{width:min(var(--max),91%);margin:auto}
+.green{color:var(--green)}
+.muted{color:var(--muted)}
+.small-label{font-size:.73rem;text-transform:uppercase;letter-spacing:2px;color:var(--green);font-weight:700}
+h1,h2,h3,h4{font-family:Manrope,sans-serif;line-height:1.2}
+h1{font-size:clamp(2.8rem,7vw,5.2rem);letter-spacing:-3px}
+h2{font-size:clamp(2rem,5vw,3rem);letter-spacing:-1.4px}
+h3{font-size:1.12rem}
+p{color:var(--muted)}
+button{color:inherit}
+
+/* HEADER */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,11,9,.92);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(18px)
+}
+.nav{
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px
+}
+.logo{display:flex;align-items:center;gap:11px;font-weight:800;font-family:Manrope,sans-serif;white-space:nowrap}
+.logo-mark{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;background:var(--green);color:#07120b}
+.nav-links{display:flex;align-items:center;gap:5px}
+.nav-link{
+  border:0;background:transparent;color:var(--muted);
+  padding:10px 12px;border-radius:9px;font-size:.85rem;
+  transition:.2s
+}
+.nav-link:hover,.nav-link.active{color:var(--green);background:rgba(85,230,165,.07)}
+.nav-contact{border:1px solid rgba(85,230,165,.4);color:var(--green)}
+.menu-toggle{display:none;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:1.2rem}
+
+/* PAGE SYSTEM */
+.page{display:none;animation:enter .35s ease}
+.page.active{display:block}
+@keyframes enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.page-wrap{min-height:68vh}
+.section{padding:75px 0}
+.section-head{max-width:680px;margin-bottom:35px}
+.section-head h2{margin:12px 0}
+.section-head p{margin-top:12px}
+.rule{height:1px;background:var(--line);margin:26px 0}
+
+/* BUTTONS */
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:10px;padding:12px 18px;border:1px solid var(--line);font-weight:700;font-size:.87rem;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--green);color:#07120b;border-color:var(--green)}
+.btn-primary:hover{background:#82f3bd}
+.btn-outline{background:rgba(255,255,255,.025)}
+.btn-outline:hover{border-color:var(--green)}
+
+/* HOME */
+.home-hero{padding:80px 0 65px;position:relative;overflow:hidden}
+.home-hero:before{content:"";position:absolute;width:460px;height:460px;right:-180px;top:-120px;background:#1b75453b;filter:blur(100px);border-radius:50%;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.availability{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #55e6a52d;background:#55e6a50b;border-radius:30px;font-size:.78rem;color:#c5f6d9;margin-bottom:25px}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}
+.hero-copy{max-width:580px;margin-top:23px;font-size:1rem}
+.hero-image{height:420px;border:1px solid #55e6a52e;border-radius:24px;overflow:hidden;position:relative;background:var(--panel)}
+.hero-image img{height:100%;width:100%;object-fit:cover;filter:brightness(.65) saturate(.72)}
+.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,#080b09e8)}
+.image-caption{position:absolute;bottom:23px;left:23px;right:23px;z-index:1}
+.image-caption h3{font-size:1.25rem;margin:8px 0}
+.image-caption p{font-size:.85rem;color:#d0d8d1}
+.hero-float{position:absolute;top:22px;left:-22px;z-index:2;padding:14px 17px;background:#111a13;border:1px solid var(--line);border-radius:13px;box-shadow:0 15px 35px #0004}
+.hero-float strong{display:block;font-size:.85rem}
+.hero-float span{font-size:.75rem;color:var(--muted)}
+.hero-bottom{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px;font-size:.8rem;color:var(--muted)}
+.hero-bottom span:before{content:"✓";color:var(--green);margin-right:7px}
+.home-strip{border-block:1px solid var(--line);background:#0c100d}
+.strip-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip-item{padding:25px 22px;border-right:1px solid var(--line)}
+.strip-item:last-child{border-right:0}
+.strip-item strong{display:block;font-family:Manrope,sans-serif;font-size:1rem}
+.strip-item span{font-size:.82rem;color:var(--muted)}
+
+/* CARDS */
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:linear-gradient(145deg,#141b15,#0d110e);border:1px solid var(--line);border-radius:17px;padding:24px;min-width:0}
+.card p{font-size:.9rem;margin-top:10px}
+.card-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:#55e6a514;color:var(--green);font-size:1.25rem;margin-bottom:18px}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.tag{font-size:.73rem;color:#c4d2c7;background:#1b261d;padding:6px 10px;border-radius:7px}
+.link-arrow{color:var(--green);font-size:.87rem;font-weight:700;display:inline-block;margin-top:17px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:42px;align-items:start}
+.about-photo{height:390px;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+.about-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.65)}
+.prose p{margin:14px 0}
+.values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:25px}
+.value{padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.value strong{display:block;font-size:.9rem}
+.value span{display:block;color:var(--muted);font-size:.8rem;margin-top:4px}
+
+/* EXPERIENCE */
+.timeline{max-width:850px}
+.timeline-item{position:relative;padding:0 0 32px 27px;border-left:1px solid #55e6a547;margin-left:5px}
+.timeline-item:last-child{border-left-color:transparent}
+.timeline-item:before{content:"";position:absolute;width:10px;height:10px;left:-5.5px;top:6px;border-radius:50%;background:var(--green)}
+.timeline-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.timeline-top h3{font-size:1.08rem}
+.timeline-role{color:var(--green);font-size:.87rem;margin-top:6px}
+.timeline-date{color:var(--muted);font-size:.8rem}
+.timeline-item p{margin-top:11px;font-size:.9rem;max-width:720px}
+.notice{border:1px solid #55e6a526;background:#55e6a508;border-radius:12px;padding:14px 16px;font-size:.82rem;color:#b6c7bb;margin-bottom:30px}
+
+/* FOCUS */
+.focus-card{min-height:185px}
+.focus-number{font-size:.78rem;color:var(--green);letter-spacing:1px}
+.focus-card h3{margin-top:19px}
+.focus-card p{margin-top:10px}
+
+/* LANGUAGES */
+.language-card{padding:21px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.language-card p{font-size:.85rem;margin-top:6px}
+.level{height:4px;background:#273229;border-radius:10px;margin-top:17px;overflow:hidden}
+.level span{height:100%;display:block;background:var(--green)}
+
+/* CONTACT */
+.contact-panel{padding:clamp(25px,6vw,55px);border:1px solid #55e6a536;border-radius:22px;background:radial-gradient(ellipse at top right,#173522,#101610 55%,#0b0f0c)}
+.contact-panel h2{font-size:clamp(2rem,5vw,3.4rem);margin:15px 0}
+.contact-panel p{max-width:620px}
+.email-link{display:inline-block;color:var(--green);margin-top:22px;overflow-wrap:anywhere;font-weight:700}
+.contact-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.contact-meta span{font-size:.82rem;border:1px solid var(--line);padding:8px 12px;border-radius:8px;color:#c2cec5}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:25px 0;margin-top:25px}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.footer-inner p,.footer-nav button{font-size:.78rem;color:var(--muted)}
+.footer-nav{display:flex;gap:14px;flex-wrap:wrap}
+.footer-nav button{background:none;border:0}
+.footer-nav button:hover{color:var(--green)}
+.top-button{position:fixed;right:18px;bottom:18px;z-index:40;width:42px;height:42px;border:1px solid #55e6a555;background:var(--green);color:#07120b;border-radius:12px;font-size:1.1rem;font-weight:800;display:none}
+.top-button.visible{display:block}
+
+@media(max-width:850px){
+  .nav-links{gap:0}
+  .nav-link{padding:9px 8px;font-size:.79rem}
+  .hero-grid{gap:28px}
+  .hero-image{height:360px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .nav{min-height:68px}
+  .menu-toggle{display:block}
+  .nav-links{display:none;position:absolute;top:67px;left:0;right:0;padding:12px 4.5% 20px;background:#0b100c;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}
+  .nav-links.open{display:flex}
+  .nav-link{text-align:left;padding:12px;font-size:.92rem}
+  .nav-contact{text-align:center;margin-top:7px}
+  .home-hero{padding:58px 0 50px}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  h1{font-size:clamp(2.65rem,12vw,4rem);letter-spacing:-2px}
+  .hero-image{height:330px}
+  .hero-float{left:10px;top:12px}
+  .strip-grid{grid-template-columns:1fr}
+  .strip-item{border-right:0;border-bottom:1px solid var(--line);padding:18px}
+  .strip-item:last-child{border-bottom:0}
+  .section{padding:58px 0}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .about-photo{height:290px}
+  .values{grid-template-columns:1fr 1fr}
+  .timeline-top{gap:5px}
+  .footer-inner{align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <nav class="container nav" aria-label="Main navigation">
+    <a class="logo" href="#home" data-page="home" aria-label="Caleb Igwe home">
+      <span class="logo-mark">CI</span>
+      <span>CALEB <span class="green">IGWE.</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="about">About</button>
+      <button class="nav-link" data-page="expertise">Expertise</button>
+      <button class="nav-link" data-page="experience">Experience</button>
+      <button class="nav-link" data-page="languages">Languages</button>
+      <button class="nav-link nav-contact" data-page="contact">Contact ↗</button>
+    </div>
+  </nav>
+</header>
+
+<main id="app">
+
+<!-- HOME PAGE -->
+<section class="page active" id="page-home" data-title="Home">
+  <div class="home-hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="availability"><span class="dot"></span> AI EVALUATION · DATA QUALITY</div>
+        <p class="small-label">Professional Portfolio</p>
+        <h1 style="margin-top:16px">Making AI and digital content <span class="green">more reliable.</span></h1>
+        <p class="hero-copy">I'm Igwe Kamsiyochukwu Caleb, a digital data rater and content evaluator focused on AI output assessment, search quality, multimodal evaluation and accurate digital information.</p>
+        <div class="actions">
+          <button class="btn btn-primary" data-page="experience">Explore Experience ↗</button>
+          <button class="btn btn-outline" data-page="about">Discover My Profile</button>
+        </div>
+        <div class="hero-bottom">
+          <span>AI output evaluation</span>
+          <span>Search quality</span>
+          <span>Content assessment</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="Modern professional workspace" fetchpriority="high">
+        <div class="hero-float"><strong>Quality over guesswork.</strong><span>Accuracy. Consistency. Context.</span></div>
+        <div class="image-caption">
+          <span class="small-label">My professional focus</span>
+          <h3>Human judgement. Better data.</h3>
+          <p>Evaluating digital experiences through structured, quality-focused assessment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-strip">
+    <div class="container strip-grid">
+      <div class="strip-item"><strong>AI & Data Quality</strong><span>Structured evaluation of digital outputs</span></div>
+      <div class="strip-item"><strong>Search & Relevance</strong><span>Assessing the usefulness of information</span></div>
+      <div class="strip-item"><strong>Multimodal Content</strong><span>Context-aware review of varied media</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="small-label">What I bring</span>
+        <h2>Where technology meets <span class="green">human judgement.</span></h2>
+        <p>My work centres on evaluating digital information and AI-driven experiences with attention to relevance, accuracy and quality standards.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon">✳</div><h3>AI Output Evaluation</h3>
+          <p>Reviewing AI-generated responses for relevance, factual consistency, instruction-following and overall usefulness.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⌕</div><h3>Search Quality</h3>
+          <p>Assessing search results and digital advertising relevance against the intent behind a query.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">◈</div><h3>Multimodal Assessment</h3>
+          <p>Evaluating digital content across text, audio, video and other media formats within task guidelines.</p>
+        </article>
+      </div>
+      <div class="actions"><button class="btn btn-outline" data-page="expertise">View All Expertise →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT PAGE -->
+<section class="page" id="page-about" data-title="About">
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="small-label">About me / 01</span>
+        <h2>A detail-oriented approach to <span class="green">digital quality.</span></h2>
+        <p>Professional background, working principles and the perspective I bring to evaluation tasks.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85" alt="Thoughtfully designed professional workspace" loading="lazy">
+        </div>
+        <div class="prose">
+          <h3>Igwe Kamsiyochukwu Caleb</h3>
+          <p class="green">Digital Data Rater & Content Evaluator</p>
+          <p>I work in digital evaluation, assessing information and content against defined quality expectations. My areas of focus include AI-generated outputs, search relevance, multimodal evaluation, content review and fact verification.</p>
+          <p>Good evaluation requires more than a quick judgement. It requires understanding the task, following the applicable guidelines, considering context and distinguishing evidence from assumption.</p>
+          <p>My professional goal is to contribute to digital products and AI systems that deliver more relevant, dependable and useful experiences.</p>
+
+          <div class="values">
+            <div class="value"><strong>01 / Accuracy</strong><span>Careful, evidence-led assessment.</span></div>
+            <div class="value"><strong>02 / Consistency</strong><span>Following task criteria and guidelines.</span></div>
+            <div class="value"><strong>03 / Context</strong><span>Understanding intent and meaning.</span></div>
+            <div class="value"><strong>04 / Integrity</strong><span>Responsible and thoughtful review.</span></div>
+          </div>
+
+          <div class="actions"><button class="btn btn-primary" data-page="contact">Get in Touch ↗</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE PAGE -->
+<section class="page" id="page-expertise" data-title="Expertise">
+  <div class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="small-label">Capabilities / 02</span>
+        <h2>Areas of <span class="green">expertise.</span></h2>
+        <p>A focused overview of the evaluation disciplines represented in my professional background.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-icon">✳</div>
+          <h3>AI Response Evaluation</h3>
+          <p>Reviewing AI-generated content against task-specific criteria, including relevance, factual consistency, clarity and instruction adherence.</p>
+          <div class="tag-list"><span class="tag">Response quality</span><span class="tag">Factual consistency</span><span class="tag">Instruction following</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">⌕</div>
+          <h3>Search & Advertising Quality</h3>
+          <p>Assessing search relevance, query intent, search advertisements and map-related results in line with applicable evaluation guidelines.</p>
+          <div class="tag-list"><span class="tag">Search relevance</span><span class="tag">Ad quality</span><span class="tag">Map results</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">◈</div>
+          <h3>Multimodal Evaluation</h3>
+          <p>Reviewing content involving different media types, considering task requirements, contextual meaning and quality criteria.</p>
+          <div class="tag-list"><span class="tag">Text</span><span class="tag">Audio</span><span class="tag">Video</span><span class="tag">Multimodal</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">≋</div>
+          <h3>Audio & Video Content</h3>
+          <p>Working with audio segmentation and video captioning tasks where accurate interpretation and adherence to instructions matter.</p>
+          <div class="tag-list"><span class="tag">Audio segmentation</span><span class="tag">Video captioning</span><span class="tag">Content review</span></div>
+        </article>
+        <article class="card">
+          <div class="card-icon">✓</div>
+          <h3>Fact Verification</h3>
+          <p>Checking claims against available evidence, identifying inconsistencies and avoiding unsupported conclusions.</p>
+          <div class="tag-list"><span class="tag">Evidence review</span><span class="tag">Accuracy</span><span class="tag">Verification</span></div>
+        </article>
+        <article class="card"
